@@ -1061,60 +1061,10 @@ ex: 強型別語言不見得是靜態語言，ex:C語言主要是靜態語言，
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="caesar-cipher-凱薩加密"><a class="header-anchor" href="#caesar-cipher-凱薩加密"></a>caesar cipher(凱薩加密)</h1>
-<h2 id="原理"><a class="header-anchor" href="#原理"></a>原理</h2>
-<p>在密碼學中，<strong>caesar cipher</strong>為一種最為人所知的加密方法，主要是利用<mark><strong>字元之間的偏移</strong></mark>來加密。</p>
-<p>而之所以叫凱薩加密，主要是因為據稱當年凱撒曾用此方法與其將軍們進行聯繫。</p>
-<p>在現今主要用於更複雜加密中的其中一個環節，ex:<strong>Vigenere Cipher(主要利用重複性與偏移來加密</strong>)等等</p>
-<p><strong>破解方法</strong>：主要利用Exhaustive attack（列舉法）來破解</p>
-<ul>
-<li><strong>下圖為caesar cipher的原理</strong></li>
-</ul>
-<p><img src="https://i.imgur.com/zdR7tjO.png" alt=""></p>
-<ol>
-<li>假設你輸入的密碼是<strong>ABCDE</strong></li>
-<li>輸入的偏移量是<strong>3</strong></li>
-<li>加密後的結果就會是<strong>DEFGHI</strong></li>
-</ol>
-<hr>
-<h2 id="實作-JS"><a class="header-anchor" href="#實作-JS"></a>實作(JS)</h2>
-<ol>
-<li>請使用者輸入加密字串與偏移量</li>
-<li>將字串進行字元切割並存於array</li>
-<li>將字元進行<strong>ASKII table</strong>查表並且分類大小寫</li>
-<li>進行<mark><strong>字元偏移</strong></mark>（<strong>重要！！</strong>）</li>
-</ol>
-<p><strong>case1:</strong></p>
-<ul>
-<li>輸入A(table:65)-&gt;偏移量3</li>
-<li>進行運算：65-65+3=3</li>
-<li>3+65=68-&gt;查表(D)</li>
-</ul>
-<p><strong>case2:</strong></p>
-<ul>
-<li>
-<p>輸入Z(table:90)-&gt;偏移量3</p>
-</li>
-<li>
-<p>進行運算：90-65+3=28</p>
-</li>
-<li>
-<p>28/26=1…<strong>2</strong></p>
-</li>
-<li>
-<p><strong>2</strong>+65=67-&gt;查表（C）</p>
-</li>
-<li>
-<p><strong>下圖為</strong><mark> <a href="http://www.asciitable.com/" target="_blank" rel="noopener"><strong>ASKII table</strong></a></mark></p>
-<p><img src="https://i.imgur.com/qZy9UaV.png" alt=""></p>
-</li>
-<li>
-<p><strong>主要查表的JS語法如下：</strong></p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> c;</span><br><span class="line"><span class="keyword">var</span> b;</span><br><span class="line">c = <span class="string">'Aao'</span>.charCodeAt(<span class="number">0</span>);<span class="comment">//把字串Aao的A利用查ASCII的值存取到C</span></span><br><span class="line">b = <span class="built_in">String</span>.fromCharCode(<span class="number">65</span>, <span class="number">97</span>, <span class="number">111</span>)<span class="comment">//查詢ASCII表中的65 97 111 值存取到b</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`顯示答案<span class="subst">$&#123;c&#125;</span>`</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`顯示答案<span class="subst">$&#123;b&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.imgur.com/KNzLIgC.png" alt=""></p>
-
+        <p><img src="https://i.imgur.com/iJDAFi6.png" alt=""></p>
+        
+          <a class="article-more-a" href="/2020/01/30/caesar%20cipher/#more">more >></a>
+        
       
 
       
@@ -1308,7 +1258,7 @@ ex: 強型別語言不見得是靜態語言，ex:C語言主要是靜態語言，
 <h3 id="one-表示為-指標"><a class="header-anchor" href="#one-表示為-指標"></a>one:表示為 指標</h3>
 <h3 id="one-就是這個指標所指向的記憶體空間的內容，也就是一個結構"><a class="header-anchor" href="#one-就是這個指標所指向的記憶體空間的內容，也就是一個結構"></a>*one: 就是這個指標所指向的記憶體空間的內容，也就是一個結構</h3>
 <h3 id="student-one-：one-這個指標指向一個-student-類型的結構"><a class="header-anchor" href="#student-one-：one-這個指標指向一個-student-類型的結構"></a>student * one ：one 這個指標指向一個 student 類型的結構</h3>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">char</span> name[<span class="number">10</span>];</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  student lynn = &#123;<span class="number">23</span>, &#123;<span class="string">'l'</span>, <span class="string">'y'</span>, <span class="string">'n'</span>, <span class="string">'n'</span>, <span class="string">'\0'</span>&#125;&#125;;</span><br><span class="line">  student *one = &amp;lynn;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%d \n"</span>, (*one).age); <span class="comment">//(*one).age可以改寫成one-&gt;age</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%s \n"</span>, (*one).name);</span><br><span class="line">  system(<span class="string">"pause"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">char</span> name[<span class="number">10</span>];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  student lynn = &#123;<span class="number">23</span>, &#123;<span class="string">'l'</span>, <span class="string">'y'</span>, <span class="string">'n'</span>, <span class="string">'n'</span>, <span class="string">'\0'</span>&#125;&#125;;</span><br><span class="line">  student *one = &amp;lynn;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%d \n"</span>, (*one).age); <span class="comment">//(*one).age可以改寫成one-&gt;age</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%s \n"</span>, (*one).name);</span><br><span class="line">  system(<span class="string">"pause"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span></span><br><span class="line">  <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">char</span> name[<span class="number">10</span>];</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">new_one</span><span class="params">(student *one)</span></span>&#123;</span><br><span class="line">  (*one).age = <span class="number">1000</span> +(*one).age;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; (*one).name[i] != <span class="string">'\0'</span>; i++)</span><br><span class="line">    (*one).name[i] = <span class="built_in">toupper</span>((*one).name[i]);</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  student lynn = &#123;<span class="number">23</span>, &#123;<span class="string">'l'</span>, <span class="string">'y'</span>, <span class="string">'n'</span>, <span class="string">'n'</span>, <span class="string">'\0'</span>&#125;&#125;;</span><br><span class="line">  new_one(&amp;lynn);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%d \n"</span>, lynn.age);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%s \n"</span>, lynn.name);</span><br><span class="line">  system(<span class="string">"pause"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -1456,15 +1406,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">演算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">coding-style</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">framwork</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">演算法</a>
               </li>
              
               <li class="article-tag-list-item">
