@@ -1,43 +1,69 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>[加密]caesar cipher - Xtim's Blog</title>
-<base href="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://yoursite.com/2020/01/30/caesar%20cipher/">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="[加密]caesar cipher">
-<meta property="og:url" content="http://yoursite.com/2020/01/30/caesar%20cipher/index.html">
-<meta property="og:site_name" content="Xtim&#39;s Blog">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/images/code.jpg">
-<meta property="article:published_time" content="2020-01-30T08:40:01.000Z">
-<meta property="article:modified_time" content="2020-06-19T16:15:00.944Z">
-<meta property="article:author" content="xxxxtim">
-<meta property="article:tag" content="JS">
-<meta property="article:tag" content="W3HEXSCHOOL">
-<meta property="article:tag" content="密碼學">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/code.jpg">
-
-
-<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
-<link href="/styles.f6e745592a9a46992ff6.css" rel="stylesheet">
-
-<link rel="stylesheet" href="/theme.07bf7d2e0710a1eedfce.css">
-
-
-<script src="/config.ae024fb7a7852da53cee.js"></script>
-
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-<body lang="en">
-<is-a></is-a>
-<script src="/runtime.ee6f73bc31187f12810a.js"></script>
-<script src="/polyfills.14df1390f4da8e838f05.js"></script>
-<script src="/main.0c926d87f8cb6ab96db0.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="[加密]caesar cipher"><meta name="keywords" content="JS,W3HEXSCHOOL,密碼學"><meta name="author" content="xxxxtim"><meta name="copyright" content="xxxxtim"><title>[加密]caesar cipher | Xtim's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#caesar-cipher-凱薩加密"><span class="toc-number">1.</span> <span class="toc-text">caesar cipher(凱薩加密)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number">1.1.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#實作-JS"><span class="toc-number">1.2.</span> <span class="toc-text">實作(JS)</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://image.flaticon.com/icons/svg/1106/1106594.svg"></div><div class="author-info__name text-center">xxxxtim</div><div class="author-info__description text-center">front-end engineer</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">13</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">15</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Xtim's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">[加密]caesar cipher</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-30</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>…</p>
+<a id="more"></a>
+<h1 id="caesar-cipher-凱薩加密"><a class="header-anchor" href="#caesar-cipher-凱薩加密"></a>caesar cipher(凱薩加密)</h1>
+<h2 id="原理"><a class="header-anchor" href="#原理"></a>原理</h2>
+<p>在密碼學中，<strong>caesar cipher</strong>為一種最為人所知的加密方法，主要是利用<mark><strong>字元之間的偏移</strong></mark>來加密。</p>
+<p>而之所以叫凱薩加密，主要是因為據稱當年凱撒曾用此方法與其將軍們進行聯繫。</p>
+<p>在現今主要用於更複雜加密中的其中一個環節，ex:<strong>Vigenere Cipher(主要利用重複性與偏移來加密</strong>)等等</p>
+<p><strong>破解方法</strong>：主要利用Exhaustive attack（列舉法）來破解</p>
+<ul>
+<li><strong>下圖為caesar cipher的原理</strong></li>
+</ul>
+<p><img src="https://i.imgur.com/zdR7tjO.png" alt=""></p>
+<ol>
+<li>假設你輸入的密碼是<strong>ABCDE</strong></li>
+<li>輸入的偏移量是<strong>3</strong></li>
+<li>加密後的結果就會是<strong>DEFGHI</strong></li>
+</ol>
+<hr>
+<h2 id="實作-JS"><a class="header-anchor" href="#實作-JS"></a>實作(JS)</h2>
+<ol>
+<li>請使用者輸入加密字串與偏移量</li>
+<li>將字串進行字元切割並存於array</li>
+<li>將字元進行<strong>ASKII table</strong>查表並且分類大小寫</li>
+<li>進行<mark><strong>字元偏移</strong></mark>（<strong>重要！！</strong>）</li>
+</ol>
+<p><strong>case1:</strong></p>
+<ul>
+<li>輸入A(table:65)-&gt;偏移量3</li>
+<li>進行運算：65-65+3=3</li>
+<li>3+65=68-&gt;查表(D)</li>
+</ul>
+<p><strong>case2:</strong></p>
+<ul>
+<li>
+<p>輸入Z(table:90)-&gt;偏移量3</p>
+</li>
+<li>
+<p>進行運算：90-65+3=28</p>
+</li>
+<li>
+<p>28/26=1…<strong>2</strong></p>
+</li>
+<li>
+<p><strong>2</strong>+65=67-&gt;查表（C）</p>
+</li>
+<li>
+<p><strong>下圖為</strong><mark> <a href="http://www.asciitable.com/" target="_blank" rel="noopener"><strong>ASKII table</strong></a></mark></p>
+<p><img src="https://i.imgur.com/qZy9UaV.png" alt=""></p>
+</li>
+<li>
+<p><strong>主要查表的JS語法如下：</strong></p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> c;<br><span class="hljs-keyword">var</span> b;<br>c = <span class="hljs-string">'Aao'</span>.charCodeAt(<span class="hljs-number">0</span>);<span class="hljs-comment">//把字串Aao的A利用查ASCII的值存取到C</span><br>b = <span class="hljs-built_in">String</span>.fromCharCode(<span class="hljs-number">65</span>, <span class="hljs-number">97</span>, <span class="hljs-number">111</span>)<span class="hljs-comment">//查詢ASCII表中的65 97 111 值存取到b</span><br><br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`顯示答案<span class="hljs-subst">$&#123;c&#125;</span>`</span>);<br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`顯示答案<span class="hljs-subst">$&#123;b&#125;</span>`</span>);<br></code></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/KNzLIgC.png" alt=""></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">xxxxtim</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/01/30/caesar%20cipher/">http://yoursite.com/2020/01/30/caesar%20cipher/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JS/">JS</a><a class="post-meta__tags" href="/tags/W3HEXSCHOOL/">W3HEXSCHOOL</a><a class="post-meta__tags" href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/">密碼學</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/02/05/typeoflang/"><i class="fa fa-chevron-left">  </i><span>[型別區分]何謂強弱型別</span></a></div><div class="next-post pull-right"><a href="/2020/01/29/MVC/"><span>[框架設計]MVC</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By xxxxtim</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

@@ -1,44 +1,66 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>[正則表達式](一)  - Xtim's Blog</title>
-<base href="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://yoursite.com/2020/03/22/RegExp-1/">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<meta name="description" content="…">
-<meta property="og:type" content="website">
-<meta property="og:title" content="[正則表達式](一) ">
-<meta property="og:url" content="http://yoursite.com/2020/03/22/RegExp-1/index.html">
-<meta property="og:site_name" content="Xtim&#39;s Blog">
-<meta property="og:description" content="…">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://image.flaticon.com/icons/svg/1106/1106594.svg">
-<meta property="article:published_time" content="2020-03-22T08:37:35.000Z">
-<meta property="article:modified_time" content="2020-06-19T15:46:56.016Z">
-<meta property="article:author" content="xxxxtim">
-<meta property="article:tag" content="JS">
-<meta property="article:tag" content="W3HEXSCHOOL">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://image.flaticon.com/icons/svg/1106/1106594.svg">
-
-
-<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
-<link href="/styles.f6e745592a9a46992ff6.css" rel="stylesheet">
-
-<link rel="stylesheet" href="/theme.07bf7d2e0710a1eedfce.css">
-
-
-<script src="/config.ae024fb7a7852da53cee.js"></script>
-
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-<body lang="en">
-<is-a></is-a>
-<script src="/runtime.ee6f73bc31187f12810a.js"></script>
-<script src="/polyfills.14df1390f4da8e838f05.js"></script>
-<script src="/main.0c926d87f8cb6ab96db0.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="[正則表達式](一) "><meta name="keywords" content="JS,W3HEXSCHOOL"><meta name="author" content="xxxxtim"><meta name="copyright" content="xxxxtim"><title>[正則表達式](一)  | Xtim's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#淺談正則表達式-一"><span class="toc-number">1.</span> <span class="toc-text">淺談正則表達式 (一)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#建立表達式"><span class="toc-number">1.1.</span> <span class="toc-text">建立表達式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#test-的使用"><span class="toc-number">1.2.</span> <span class="toc-text">test()的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正則表達式"><span class="toc-number">1.3.</span> <span class="toc-text">正則表達式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匹配模式"><span class="toc-number">1.4.</span> <span class="toc-text">匹配模式</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://image.flaticon.com/icons/svg/1106/1106594.svg"></div><div class="author-info__name text-center">xxxxtim</div><div class="author-info__description text-center">front-end engineer</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">13</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">15</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Xtim's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">[正則表達式](一) </div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-03-22</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>…</p>
+<a id="more"></a>
+<h1 id="淺談正則表達式-一"><a class="header-anchor" href="#淺談正則表達式-一"></a>淺談正則表達式 (一)</h1>
+<p><strong>用途</strong>：用於制定字串間的規則，將其用於過濾字串上</p>
+<h2 id="建立表達式"><a class="header-anchor" href="#建立表達式"></a>建立表達式</h2>
+<p>表達式的建立一般分成兩種方式，<font color="red">變量</font>的宣告以及<font color ="red">物件</font>的宣告</p>
+<ul>
+<li>物件的宣告方式</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> apple=<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"正則表達式"</span>,<span class="hljs-string">"匹配模式"</span>)<br></code></pre></td></tr></table></figure>
+<ul>
+<li>變量的宣告方式</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> banana=<span class="hljs-regexp">/正則表達式/</span>匹配模式<span class="hljs-comment">//變數寫法</span><br></code></pre></td></tr></table></figure>
+<p>傳入的參數主要有 <font color="blue">正則表達式</font>以及<font color="blue">匹配模式</font>兩種</p>
+<h2 id="test-的使用"><a class="header-anchor" href="#test-的使用"></a>test()的使用</h2>
+<p>使用這個方法可以檢查一個字串是否符合表達式規則</p>
+<p>符合的話，返回true，否則返回false</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> apple=<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"a"</span>)<br><span class="hljs-keyword">var</span> result =apple.test(<span class="hljs-string">"a"</span>);<span class="hljs-comment">//return true</span><br><span class="hljs-keyword">var</span> result =apple.test(<span class="hljs-string">"abcd"</span>);<span class="hljs-comment">//return true</span><br></code></pre></td></tr></table></figure>
+<h2 id="正則表達式"><a class="header-anchor" href="#正則表達式"></a>正則表達式</h2>
+<p>正則表達式包含了<strong>字串規則</strong>+<strong>量詞</strong></p>
+<p><strong>量詞的使用</strong></p>
+<ul>
+<li>只對前一個內容起作用</li>
+<li>{n} :正好出現n次</li>
+<li>{m,n}:出現m到n次</li>
+<li>{m,}:出現m次以上</li>
+<li>+:至少一個 相當於{1,}</li>
+<li>*: 0個或多個  相當於{0,}</li>
+<li>? 0個或1個  相當於{0,1}</li>
+</ul>
+<p>Ex:如果想要測試輸入的字串中<strong>是否包含</strong><font color="red">&quot;a&quot;</font>這個字元</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> apple=<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"a"</span>)<span class="hljs-comment">//method 1</span><br><span class="hljs-keyword">var</span> apple=<span class="hljs-regexp">/a/</span> <span class="hljs-comment">//method 2</span><br><br><span class="hljs-keyword">var</span> result =apple.test(<span class="hljs-string">"abcd"</span>);<span class="hljs-comment">//return true</span><br></code></pre></td></tr></table></figure>
+<p>Ex:如果想要測試輸入的字串中是否包含<font color="red">&quot;bbb&quot;</font>這個字元</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> apple=<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"b&#123;3&#125;"</span>)<span class="hljs-comment">//method 1</span><br><span class="hljs-keyword">var</span> apple=<span class="hljs-regexp">/b&#123;3&#125;/</span> <span class="hljs-comment">//method 2</span><br><br><span class="hljs-keyword">var</span> result =apple.test(<span class="hljs-string">"abbbd"</span>);<span class="hljs-comment">//return true</span><br></code></pre></td></tr></table></figure>
+<p>Ex:檢查字串中是否有<font color="red">ababab</font> 存在</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> orange=<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"(ab)&#123;3&#125;"</span>)<br><br><span class="hljs-keyword">var</span> result =orange.test(<span class="hljs-string">"abababhhh"</span>);<span class="hljs-comment">//return true</span><br></code></pre></td></tr></table></figure>
+<p>Ex:檢查字串中是否有<font color="red">a<font color="blue">b</font>c </font>,<font color="red">a<font color="blue">bb</font>c </font>,<font color="red">a<font color="blue">bbb</font>c </font>   存在</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> orange=<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"ab&#123;1,3&#125;c"</span>) <br><span class="hljs-keyword">var</span> result =orange.test(<span class="hljs-string">"abcd"</span>);<span class="hljs-comment">//return true</span><br></code></pre></td></tr></table></figure>
+<h2 id="匹配模式"><a class="header-anchor" href="#匹配模式"></a>匹配模式</h2>
+<p>主要有2個參數(順序可以顛倒)</p>
+<ul>
+<li><font color="red">i</font>: ignore，忽略大小寫</li>
+<li><font color="red">g</font>: 全局匹配模式</li>
+</ul>
+<p>Ex: 檢查字串中是否有<strong>ab</strong>,<strong>Ab</strong>,<strong>aB</strong>,<strong>AB</strong>存在</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> apple=<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"ab"</span>,<span class="hljs-string">"i"</span>)<br><br><span class="hljs-keyword">var</span> result =apple.test(<span class="hljs-string">"abcd"</span>);<span class="hljs-comment">//return true </span><br><span class="hljs-keyword">var</span> result =apple.test(<span class="hljs-string">"aAb"</span>);<span class="hljs-comment">//return true</span><br><span class="hljs-keyword">var</span> result =apple.test(<span class="hljs-string">"aC"</span>);<span class="hljs-comment">//return false</span><br></code></pre></td></tr></table></figure>
+<p>資料來源：</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/av74719082/" target="_blank" rel="noopener">https://www.bilibili.com/video/av74719082/</a></li>
+<li><a href="http://ccckmit.wikidot.com/regularexpression" target="_blank" rel="noopener">http://ccckmit.wikidot.com/regularexpression</a></li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">xxxxtim</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/03/22/RegExp-1/">http://yoursite.com/2020/03/22/RegExp-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JS/">JS</a><a class="post-meta__tags" href="/tags/W3HEXSCHOOL/">W3HEXSCHOOL</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/06/17/jestInstall/"><i class="fa fa-chevron-left">  </i><span>[測試]Jest install</span></a></div><div class="next-post pull-right"><a href="/2020/03/08/MarkovChain/"><span>[演算法]馬可夫鏈 (Markov Chain)</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By xxxxtim</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

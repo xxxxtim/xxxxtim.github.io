@@ -1,45 +1,56 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>[演算法]馬可夫鏈 (Markov Chain) - Xtim's Blog</title>
-<base href="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://yoursite.com/2020/03/08/MarkovChain/">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<meta name="description" content="…">
-<meta property="og:type" content="website">
-<meta property="og:title" content="[演算法]馬可夫鏈 (Markov Chain)">
-<meta property="og:url" content="http://yoursite.com/2020/03/08/MarkovChain/index.html">
-<meta property="og:site_name" content="Xtim&#39;s Blog">
-<meta property="og:description" content="…">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://image.flaticon.com/icons/svg/1106/1106594.svg">
-<meta property="article:published_time" content="2020-03-08T11:22:06.000Z">
-<meta property="article:modified_time" content="2020-06-18T16:55:49.558Z">
-<meta property="article:author" content="xxxxtim">
-<meta property="article:tag" content="JS">
-<meta property="article:tag" content="W3HEXSCHOOL">
-<meta property="article:tag" content="演算法">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://image.flaticon.com/icons/svg/1106/1106594.svg">
-
-
-<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
-<link href="/styles.f6e745592a9a46992ff6.css" rel="stylesheet">
-
-<link rel="stylesheet" href="/theme.07bf7d2e0710a1eedfce.css">
-
-
-<script src="/config.ae024fb7a7852da53cee.js"></script>
-
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-<body lang="en">
-<is-a></is-a>
-<script src="/runtime.ee6f73bc31187f12810a.js"></script>
-<script src="/polyfills.14df1390f4da8e838f05.js"></script>
-<script src="/main.0c926d87f8cb6ab96db0.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="[演算法]馬可夫鏈 (Markov Chain)"><meta name="keywords" content="JS,W3HEXSCHOOL,演算法"><meta name="author" content="xxxxtim"><meta name="copyright" content="xxxxtim"><title>[演算法]馬可夫鏈 (Markov Chain) | Xtim's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#淺談-馬可夫鏈-Markov-Chain"><span class="toc-number">1.</span> <span class="toc-text">淺談 馬可夫鏈 (Markov Chain)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理："><span class="toc-number">1.1.</span> <span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS實作部份："><span class="toc-number">1.2.</span> <span class="toc-text">JS實作部份：</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://image.flaticon.com/icons/svg/1106/1106594.svg"></div><div class="author-info__name text-center">xxxxtim</div><div class="author-info__description text-center">front-end engineer</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">13</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">15</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Xtim's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">[演算法]馬可夫鏈 (Markov Chain)</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-03-08</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>…</p>
+<a id="more"></a>
+<h1 id="淺談-馬可夫鏈-Markov-Chain"><a class="header-anchor" href="#淺談-馬可夫鏈-Markov-Chain"></a>淺談 馬可夫鏈 (Markov Chain)</h1>
+<h2 id="原理："><a class="header-anchor" href="#原理："></a>原理：</h2>
+<p><strong>馬可夫鏈</strong>（英語：<strong>Markov chain</strong>），又稱<font color="red">離散時間馬可夫鏈</font>（discrete-time Markov chain，縮寫為<font color="blue">DTMC</font>），因俄國數學家<strong>安德烈·馬可夫</strong>得名</p>
+<p>為狀態空間中經過從<strong>一個狀態到另一個狀態的轉換的隨機過程</strong>。</p>
+<p>該過程要求具備<font color="red">「無記憶」</font>的性質：</p>
+<p>下一狀態的機率分布只能由當前狀態決定，在時間序列中它前面的事件均與之無關。</p>
+<p>這種特定類型的「無記憶性」稱作馬可夫性質。馬爾科夫鏈作為實際過程的統計模型具有許多應用。</p>
+<p><strong>接下來以故事來說明：</strong></p>
+<p>有一位新進的員工叫小楨，由於她住的地方離上班地點非常遙遠，必須一大早就騎著山豬通勤，因此常常上班遲到。</p>
+<p>因此身為她的老闆非常困擾，決定利用演算法中的<strong>馬可夫鍊</strong>來</p>
+<p><mark><em>預測小楨下個星期出勤狀況，計算發生的機率為何呢？？</em></mark></p>
+<p><img src="https://i.imgur.com/bAEI8Z4.png" alt=""></p>
+<p><strong>下圖為小楨出勤狀態圖</strong>：</p>
+<p><img src="https://i.imgur.com/ulypSQw.png" alt=""></p>
+<p>小楨出勤有2種狀態分別是<strong>遲到</strong>與<strong>不遲到</strong>兩種</p>
+<p><strong>遲到</strong>的狀態表示<strong>E</strong>，發生的機率為<strong>0.5</strong></p>
+<p><strong>不遲到</strong>的狀態表示<strong>A</strong>，發生的機率為<strong>0.5</strong></p>
+<p>E—&gt;E：今天<strong>遲到</strong>而且明天<strong>遲到</strong>，機率為<strong>0.3</strong></p>
+<p>E—&gt;A: 今天<strong>遲到</strong>，明天<strong>不遲到</strong>，機率為<strong>0.7</strong></p>
+<p>A—&gt;E：今天<strong>不遲到</strong>，明天<strong>遲到</strong>，機率為<strong>0.4</strong></p>
+<p>A—&gt;A：今天<strong>不遲到</strong>而且明天<strong>不遲到</strong>，機率為<strong>0.6</strong></p>
+<hr>
+<h2 id="JS實作部份："><a class="header-anchor" href="#JS實作部份："></a>JS實作部份：</h2>
+<ol>
+<li>主要分成2支檔案，模組化檔案一支，主程式一支</li>
+<li>出勤狀態圖<strong>模組化</strong>如下所示：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 狀態機率： P(E) = 0.5, P(A) = 0.5</span><br><span class="hljs-comment">// 轉移機率： P(x =&gt; y)</span><br><br><span class="hljs-comment">//遲到的狀態表示E，發生的機率為0.5</span><br><span class="hljs-comment">//不遲到的狀態表示A，發生的機率為0.5</span><br><span class="hljs-comment">//E—&gt;E：今天遲到而且明天遲到，機率為0.3</span><br><span class="hljs-comment">//E—&gt;A: 今天遲到，明天不遲到，機率為0.7</span><br><span class="hljs-comment">//A—&gt;E：今天不遲到，明天遲到，機率為0.4</span><br><span class="hljs-comment">//A—&gt;A：今天不遲到而且明天不遲到，機率為0.6</span><br><br><span class="hljs-keyword">const</span> P = &#123;<br>    <span class="hljs-string">'E'</span>: <span class="hljs-number">0.5</span>, <span class="hljs-string">'A'</span>: <span class="hljs-number">0.5</span>,<br>    <span class="hljs-string">'E=&gt;E'</span>: <span class="hljs-number">0.3</span>, <span class="hljs-string">'E=&gt;A'</span>: <span class="hljs-number">0.7</span>,<br>    <span class="hljs-string">'A=&gt;E'</span>: <span class="hljs-number">0.4</span>, <span class="hljs-string">'A=&gt;A'</span>: <span class="hljs-number">0.6</span>,<br>&#125;<br><br><span class="hljs-built_in">module</span>.exports = P<span class="hljs-comment">//輸出模組</span><br></code></pre></td></tr></table></figure>
+<ol start="3">
+<li>將模組化的檔案引入到<strong>主程式</strong>中</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> P = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./prob'</span>)<span class="hljs-comment">//把模組引入</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">markov</span>(<span class="hljs-params">status</span>) </span>&#123;<br>    <span class="hljs-keyword">let</span> p = P[status[<span class="hljs-number">0</span>]]<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; status.length; i++) &#123;<br>        <span class="hljs-keyword">let</span> key = status[i - <span class="hljs-number">1</span>] + <span class="hljs-string">'=&gt;'</span> + status[i]<br>        p = p * P[key]<br>    &#125;<br>    <span class="hljs-keyword">return</span> p<br>&#125;<br><br><span class="hljs-keyword">const</span> status = [<span class="hljs-string">'E'</span>, <span class="hljs-string">'A'</span>, <span class="hljs-string">'E'</span>, <span class="hljs-string">'E'</span>, <span class="hljs-string">'A'</span>]<br><br><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"p=%j=%f"</span>, status, markov(status))<br></code></pre></td></tr></table></figure>
+<ol start="4">
+<li>主管預計小楨下星期出勤狀況會<strong>發生的機率</strong>如下: <font color="red">0.293999</font></li>
+</ol>
+<p><img src="https://i.imgur.com/HUMARZt.png" alt=""></p>
+<p><strong>資料來源：</strong><br>
+<a href="https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/马尔可夫链</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE#/media/File:Markovkate_01.svg" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/马尔可夫链#/media/File:Markovkate_01.svg</a></p>
+<p><a href="http://ccckmit.wikidot.com/ai:markov" target="_blank" rel="noopener">http://ccckmit.wikidot.com/ai:markov</a></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">xxxxtim</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/03/08/MarkovChain/">http://yoursite.com/2020/03/08/MarkovChain/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JS/">JS</a><a class="post-meta__tags" href="/tags/W3HEXSCHOOL/">W3HEXSCHOOL</a><a class="post-meta__tags" href="/tags/%E6%BC%94%E7%AE%97%E6%B3%95/">演算法</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/22/RegExp-1/"><i class="fa fa-chevron-left">  </i><span>[正則表達式](一) </span></a></div><div class="next-post pull-right"><a href="/2020/02/29/CodingStyle-%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87/"><span>[CodingStyle]命名規則</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By xxxxtim</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

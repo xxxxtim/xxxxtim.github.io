@@ -1,44 +1,76 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>[CodingStyle]命名規則 - Xtim's Blog</title>
-<base href="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://yoursite.com/2020/02/29/CodingStyle-%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87/">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<meta name="description" content="…">
-<meta property="og:type" content="website">
-<meta property="og:title" content="[CodingStyle]命名規則">
-<meta property="og:url" content="http://yoursite.com/2020/02/29/CodingStyle-%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87/index.html">
-<meta property="og:site_name" content="Xtim&#39;s Blog">
-<meta property="og:description" content="…">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://image.flaticon.com/icons/svg/1106/1106594.svg">
-<meta property="article:published_time" content="2020-02-29T06:34:47.000Z">
-<meta property="article:modified_time" content="2020-06-18T16:55:25.871Z">
-<meta property="article:author" content="xxxxtim">
-<meta property="article:tag" content="JS">
-<meta property="article:tag" content="W3HEXSCHOOL">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://image.flaticon.com/icons/svg/1106/1106594.svg">
-
-
-<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
-<link href="/styles.f6e745592a9a46992ff6.css" rel="stylesheet">
-
-<link rel="stylesheet" href="/theme.07bf7d2e0710a1eedfce.css">
-
-
-<script src="/config.ae024fb7a7852da53cee.js"></script>
-
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-<body lang="en">
-<is-a></is-a>
-<script src="/runtime.ee6f73bc31187f12810a.js"></script>
-<script src="/polyfills.14df1390f4da8e838f05.js"></script>
-<script src="/main.0c926d87f8cb6ab96db0.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="[CodingStyle]命名規則"><meta name="keywords" content="JS,W3HEXSCHOOL"><meta name="author" content="xxxxtim"><meta name="copyright" content="xxxxtim"><title>[CodingStyle]命名規則 | Xtim's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CodingStyle-命名規則"><span class="toc-number">1.</span> <span class="toc-text">CodingStyle(命名規則)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#為什麼要有命名規則？？"><span class="toc-number">1.1.</span> <span class="toc-text">為什麼要有命名規則？？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常見的命名方式"><span class="toc-number">1.2.</span> <span class="toc-text">常見的命名方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#變數的命名"><span class="toc-number">1.2.1.</span> <span class="toc-text">變數的命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函數的命名"><span class="toc-number">1.2.2.</span> <span class="toc-text">函數的命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#巨集（macro）的命名"><span class="toc-number">1.2.3.</span> <span class="toc-text">巨集（macro）的命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#檔案的命名"><span class="toc-number">1.2.4.</span> <span class="toc-text">檔案的命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匈牙利命名法（Hungarian-notation）"><span class="toc-number">1.2.5.</span> <span class="toc-text">匈牙利命名法（Hungarian notation）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#駝峰式命名法（Camel-case）"><span class="toc-number">1.2.6.</span> <span class="toc-text">駝峰式命名法（Camel case）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#帕斯卡命名法（Pascal）"><span class="toc-number">1.2.7.</span> <span class="toc-text">帕斯卡命名法（Pascal）</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://image.flaticon.com/icons/svg/1106/1106594.svg"></div><div class="author-info__name text-center">xxxxtim</div><div class="author-info__description text-center">front-end engineer</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">13</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">15</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Xtim's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">[CodingStyle]命名規則</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-02-29</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>…</p>
+<a id="more"></a>
+<h1 id="CodingStyle-命名規則"><a class="header-anchor" href="#CodingStyle-命名規則"></a>CodingStyle(命名規則)</h1>
+<h2 id="為什麼要有命名規則？？"><a class="header-anchor" href="#為什麼要有命名規則？？"></a>為什麼要有命名規則？？</h2>
+<ul>
+<li>好的命名方式有助於在專案之間<font color="red">產生好的溝通，更容易傳遞訊息</font></li>
+<li>有助於<font color="red">減少名稱的增生（name proliferation）</font>。<br>
+Ex:計算全部點數的名稱可以叫 pointTotal，也可以叫totalPoint，這樣一來會造成日後閱讀你程式碼的人困擾</li>
+<li>當你寫的程式規模太大時，以致於你無法了解事情的全部面貌時，你可以藉由命名規則<font color="red">使自己更專注在自己的開發上</font></li>
+</ul>
+<h2 id="常見的命名方式"><a class="header-anchor" href="#常見的命名方式"></a>常見的命名方式</h2>
+<ul>
+<li>變數</li>
+<li>函數</li>
+<li>巨集（macro）</li>
+<li>檔案</li>
+<li>匈牙利命名法（Hungarian notation）</li>
+<li>駝峰式命名法（Camel case）</li>
+<li>帕氏卡命名法（Pascal）</li>
+</ul>
+<h3 id="變數的命名"><a class="header-anchor" href="#變數的命名"></a>變數的命名</h3>
+<p>通常都是<font color="red">名詞</font>，可以直接反應出變數所代表的意思。。<br>
+Ex： totalMoney  或是  exchangeRate</p>
+<p>如果不用名詞，通常也會是<font color="red">名詞化的動詞</font>！<br>
+Ex：widgetLength 等等。</p>
+<h3 id="函數的命名"><a class="header-anchor" href="#函數的命名"></a>函數的命名</h3>
+<p>通常使用<font color="red">動詞</font>來表達函數的動作。</p>
+<p>儘量隱藏函數內部的具體實作過程，始終從使用者的角度來為函數命名。<br>
+Ex： <strong>count</strong>Oranges() 、 member.<strong>get</strong>Name() 等。</p>
+<h3 id="巨集（macro）的命名"><a class="header-anchor" href="#巨集（macro）的命名"></a>巨集（macro）的命名</h3>
+<p>名稱全使用<font color="red">大寫字母</font>，如果使用專案名稱來命名更好！</p>
+<p>Ex：PROJECT_NAME_MACRO</p>
+<h3 id="檔案的命名"><a class="header-anchor" href="#檔案的命名"></a>檔案的命名</h3>
+<p>大小寫不同的系統中，儘量<strong>不要同時有大小寫不同的檔案名</strong>稱，例： math.h  或是 Math.h</p>
+<p>如果專案中使用了不同語言，則儘量不要使用相同的檔名而不同的副檔名。</p>
+<p>Ex： detection.c 或是 detection.java</p>
+<p>儘量<strong>確保所有的檔案名稱都不相同</strong>，即使是在不同的目錄內。</p>
+<h3 id="匈牙利命名法（Hungarian-notation）"><a class="header-anchor" href="#匈牙利命名法（Hungarian-notation）"></a>匈牙利命名法（Hungarian notation）</h3>
+<p>此命名法又可細分為：系統<font color="blue">匈牙利命名法</font>和<font color="blue">匈牙利應用命名法。</font></p>
+<p>一個變數名由一個<mark><strong>前綴名稱+名稱</strong></mark>所組成</p>
+<p>前綴名稱有助於記憶變數的類型和用途，緊跟着的就是程式設計師選擇的任何名<br>
+<img src="https://i.imgur.com/DcswV62.png" alt=""></p>
+<p>在<font color="blue">匈牙利命名法</font>中，前綴代表了變數的<font color="red">實際資料類型</font></p>
+<ul>
+<li><strong>l</strong>AccountNum：前綴是一個長整數（“longInteger”）</li>
+<li><strong>arru8</strong>NumberList：前綴是一個無符號8位元整型陣列（“arru8”）;</li>
+</ul>
+<p>在<font color="blue">匈牙利應用命名法</font>中，前綴代表了變數的<font color="red">目的，或者說它做了什麼</font></p>
+<ul>
+<li><strong>rw</strong>Position：變數代表&quot;row&quot;。</li>
+<li><strong>us</strong>Name：變數代表一個非安全字串（“unsafeString”），需要在使用前處理。</li>
+</ul>
+<p>[<strong>常用的前綴表格</strong>]：<br>
+<img src="https://i.imgur.com/2XSW7Zu.png" alt=""></p>
+<h3 id="駝峰式命名法（Camel-case）"><a class="header-anchor" href="#駝峰式命名法（Camel-case）"></a>駝峰式命名法（Camel case）</h3>
+<p>當<font color="blue">變數名</font>和<font color="blue">函式名稱</font>是由二個或多個單字連結在一起，而構成的唯一識別字時，利用「駝峰式大小寫」來表示，可以增加變數和函式的可讀性。</p>
+<p><strong>小駝峰命名方式（lower camel case）：</strong></p>
+<p><strong>第一個單字</strong>以<font color="red">小寫字母</font>開始，<strong>第二個單字</strong>的首字<font color="red">字母大寫</font></p>
+<p>例如：<strong>f</strong>irst<strong>N</strong>ame、<strong>l</strong>ast<strong>N</strong>ame。</p>
+<h3 id="帕斯卡命名法（Pascal）"><a class="header-anchor" href="#帕斯卡命名法（Pascal）"></a>帕斯卡命名法（Pascal）</h3>
+<p>帕斯卡命名法又叫<font color="blue">大駝峰命名法（lower camel case）</font>。</p>
+<p>原理和駝峰命名一樣，只是每一個<strong>單字的首字母</strong>都採用<font color="red">大寫字母</font>，例如：<strong>F</strong>irst<strong>N</strong>ame、<strong>L</strong>ast<strong>N</strong>ame</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">xxxxtim</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/02/29/CodingStyle-%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87/">http://yoursite.com/2020/02/29/CodingStyle-%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JS/">JS</a><a class="post-meta__tags" href="/tags/W3HEXSCHOOL/">W3HEXSCHOOL</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/08/MarkovChain/"><i class="fa fa-chevron-left">  </i><span>[演算法]馬可夫鏈 (Markov Chain)</span></a></div><div class="next-post pull-right"><a href="/2020/02/22/variable/"><span>[變數宣告]Var vs let </span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By xxxxtim</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

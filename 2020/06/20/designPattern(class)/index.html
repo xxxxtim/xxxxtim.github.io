@@ -1,42 +1,84 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>DesignPattern - Xtim's Blog</title>
-<base href="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://yoursite.com/2020/06/20/designPattern(class)/">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="DesignPattern"><meta name="keywords" content="JS,designPattern"><meta name="author" content="xxxxtim"><meta name="copyright" content="xxxxtim"><title>DesignPattern | Xtim's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DesignPattern"><span class="toc-number">1.</span> <span class="toc-text">DesignPattern</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DesignPattern-是什麼？？"><span class="toc-number">1.1.</span> <span class="toc-text">DesignPattern 是什麼？？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-的建立"><span class="toc-number">1.2.</span> <span class="toc-text">Class 的建立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#￼1"><span class="toc-number">1.3.</span> <span class="toc-text">1
+2
+3
+4
+5
+6
+7
+8
+&#x2F;&#x2F; object 的建立
+let yachen &#x3D; new People(&#39;jack&#39;, 30);
+jack.eat();
+jack.speak();
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="DesignPattern">
-<meta property="og:url" content="http://yoursite.com/2020/06/20/designPattern(class)/index.html">
-<meta property="og:site_name" content="Xtim&#39;s Blog">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://image.flaticon.com/icons/svg/1106/1106594.svg">
-<meta property="article:published_time" content="2020-06-20T05:26:01.000Z">
-<meta property="article:modified_time" content="2020-06-20T06:46:45.189Z">
-<meta property="article:author" content="xxxxtim">
-<meta property="article:tag" content="JS">
-<meta property="article:tag" content="designPattern">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://image.flaticon.com/icons/svg/1106/1106594.svg">
-
-
-<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
-<link href="/styles.f6e745592a9a46992ff6.css" rel="stylesheet">
-
-<link rel="stylesheet" href="/theme.07bf7d2e0710a1eedfce.css">
-
-
-<script src="/config.ae024fb7a7852da53cee.js"></script>
-
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-<body lang="en">
-<is-a></is-a>
-<script src="/runtime.ee6f73bc31187f12810a.js"></script>
-<script src="/polyfills.14df1390f4da8e838f05.js"></script>
-<script src="/main.0c926d87f8cb6ab96db0.js"></script>
-</body>
-</html>
+let xxxtim &#x3D; new People(&#39;xxxtim&#39;, 27);
+xxxtim.eat();
+xxxtim.speak();
+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class的繼承"><span class="toc-number">1.4.</span> <span class="toc-text">class的繼承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#￼4"><span class="toc-number">1.5.</span> <span class="toc-text">1
+2
+3
+4
+&#x2F;&#x2F; 建立 object
+let titan &#x3D; new Student(&#39;titan&#39;, 17, &#39;A123&#39;);
+titan.study();
+titan.eat();
+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#題目練習"><span class="toc-number">1.6.</span> <span class="toc-text">題目練習</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://image.flaticon.com/icons/svg/1106/1106594.svg"></div><div class="author-info__name text-center">xxxxtim</div><div class="author-info__description text-center">front-end engineer</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">13</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">15</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Xtim's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">DesignPattern</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-20</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>…</p>
+<a id="more"></a>
+<h1 id="DesignPattern"><a class="header-anchor" href="#DesignPattern"></a>DesignPattern</h1>
+<h2 id="DesignPattern-是什麼？？"><a class="header-anchor" href="#DesignPattern-是什麼？？"></a>DesignPattern 是什麼？？</h2>
+<p>在軟體工程中，<font color="red">設計模式（design pattern）</font>是對軟體設計中普遍存在（反覆出現）的各種問題，所提出的<mark>解決方案</mark>。</p>
+<p>這個術語是由埃里希·伽瑪（Erich Gamma）等人在1990年代從建築設計領域引入到計算機科學的。</p>
+<p>設計模式並不直接用來完成程式碼的編寫，而是<font color="blue"><em><strong>描述在各種不同情況下，要怎麼解決問題的一種方案</strong></em>。</font></p>
+<p>設計模式能使不穩定依賴於相對穩定、具體依賴於相對抽象，避免會引起麻煩的緊耦合，以增強軟體設計面對並適應變化的能力。</p>
+<hr>
+<h2 id="Class-的建立"><a class="header-anchor" href="#Class-的建立"></a>Class 的建立</h2>
+<p><img src="https://i.imgur.com/CTP8AIo.png" alt=""></p>
+<div class="danger">
+<p>在JS中，我會把<strong>class</strong>想成是一份蓋房子的<strong>設計搞</strong>，一個可參考的文件，沒有 實體 (Instance) 的概念，屬<strong>靜態</strong>的。</p>
+<p><strong>object</strong>是一個根據設計搞所建立的房子，看的到、摸的到的實體，屬於<strong>動態</strong>的，狀態會隨時改變，但架構與行為不會改變。</p>
+</div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 創立class</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>&#123;<br>    <span class="hljs-comment">// constructor 用來引入靜態資源</span><br>    <span class="hljs-keyword">constructor</span>(name, age) &#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.age = age;<br>    &#125;<br>    eat() &#123;<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span> 吃東西`</span>);<br>    &#125;<br>    speak() &#123;<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`我的名字是<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>,我的年紀是<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.age&#125;</span>`</span>);<br>    &#125;<br><br>&#125;<span class="hljs-comment">//class</span><br></code></pre></td></tr></table></figure>
+<h2 id="￼1"><a class="header-anchor" href="#￼1"></a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// object 的建立</span><br><span class="hljs-keyword">let</span> yachen = <span class="hljs-keyword">new</span> People(<span class="hljs-string">'jack'</span>, <span class="hljs-number">30</span>);<br>jack.eat();<br>jack.speak();<br><br><span class="hljs-keyword">let</span> xxxtim = <span class="hljs-keyword">new</span> People(<span class="hljs-string">'xxxtim'</span>, <span class="hljs-number">27</span>);<br>xxxtim.eat();<br>xxxtim.speak();<br></code></pre></td></tr></table></figure></h2>
+<h2 id="class的繼承"><a class="header-anchor" href="#class的繼承"></a>class的繼承</h2>
+<p><img src="https://i.imgur.com/z5tkQSX.png" alt=""></p>
+<div class="danger">
+<p>父類別如爸爸，子類別如兒子，爸爸有的，兒子一旦繼承了也會有，爸爸有的你不但擁有，還可以加上兒子自己的東西。好處是可以<strong>減少重覆撰寫相同的程式碼</strong></p>
+</div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 建立一個父類</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>&#123;<br>    <span class="hljs-comment">// constructor 用來引入靜態資源</span><br>    <span class="hljs-keyword">constructor</span>(name, age) &#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.age = age;<br>    &#125;<br>    eat() &#123;<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span> 吃東西`</span>);<br>    &#125;<br>    speak() &#123;<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`我的名字是<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>,我的年紀是<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.age&#125;</span>`</span>);<br>    &#125;<br><br>&#125;<span class="hljs-comment">//class</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 子類繼承父類</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">People</span> </span>&#123;<br>    <span class="hljs-keyword">constructor</span>(name, age, number) &#123;<br>        <span class="hljs-comment">// super:表示把參數傳給父類的構造函數執行</span><br>        <span class="hljs-keyword">super</span>(name, age);<br>        <span class="hljs-keyword">this</span>.number = number;<br>    &#125;<br>    study() &#123;<br>        comsole.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>study`</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="￼4"><a class="header-anchor" href="#￼4"></a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 建立 object</span><br><span class="hljs-keyword">let</span> titan = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">'titan'</span>, <span class="hljs-number">17</span>, <span class="hljs-string">'A123'</span>);<br>titan.study();<br>titan.eat();<br></code></pre></td></tr></table></figure></h2>
+<h2 id="題目練習"><a class="header-anchor" href="#題目練習"></a>題目練習</h2>
+<div class="danger">
+<p><img src="https://i.imgur.com/XPfA3Oi.png" alt=""></p>
+<ul>
+<li>叫車時，可以叫快車或漫車，任何車都有車牌和名稱</li>
+<li>快車每公里1元/慢車每公里2元</li>
+<li>車輛行使時，顯示車輛資訊</li>
+<li>到達目的時，顯示金額</li>
+<li>Q:如果叫快車，行駛5KM，共需多少錢？</li>
+</ul>
+</div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>&#123;<br>    <span class="hljs-keyword">constructor</span>(name, plate) &#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.plate = plate;<br>    &#125;<br>&#125;;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FastCar</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Car</span> </span>&#123;<br>    <span class="hljs-keyword">constructor</span>(name, plate) &#123;<br>        <span class="hljs-keyword">super</span>(name, plate);<br>        <span class="hljs-keyword">this</span>.price = <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SlowCar</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Car</span> </span>&#123;<br>    <span class="hljs-keyword">constructor</span>(name, plate) &#123;<br>        <span class="hljs-keyword">super</span>(name, plate);<br>        <span class="hljs-keyword">this</span>.price = <span class="hljs-number">2</span>;<br>    &#125;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Trip</span> </span>&#123;<br>    <span class="hljs-keyword">constructor</span>(car, distance) &#123;<br>        <span class="hljs-keyword">this</span>.car = car;<br>        <span class="hljs-keyword">this</span>.distance = distance;<br>    &#125;;<br>    star() &#123;<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`開始發車，車子名稱：<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.car.name&#125;</span>/車牌名稱:<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.car.plate&#125;</span>`</span>)<br>    &#125;;<br>    end() &#123;<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`到達目的，價格：<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.car.price * <span class="hljs-keyword">this</span>.distance&#125;</span>`</span>)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> car = <span class="hljs-keyword">new</span> FastCar(<span class="hljs-string">'BMW'</span>, <span class="hljs-string">'xq-9121'</span>);<br><span class="hljs-keyword">let</span> trip = <span class="hljs-keyword">new</span> Trip(car, <span class="hljs-number">10</span>);<br>trip.star();<br>trip.end();<br></code></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/DSvZDvv.png" alt=""></p>
+<hr>
+<p>資料來源：</p>
+<ul>
+<li><a href="https://sites.google.com/a/mis.nsysu.edu.tw/cheng-shi-zi-xun-wang/java-jin-jie-pian/wu-jian-dao-xiang/2-shen-me-shi-ji-cheng" target="_blank" rel="noopener">https://sites.google.com/a/mis.nsysu.edu.tw/cheng-shi-zi-xun-wang/java-jin-jie-pian/wu-jian-dao-xiang/2-shen-me-shi-ji-cheng</a></li>
+<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/super" target="_blank" rel="noopener">https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/super</a></li>
+<li><a href="https://zh.wikipedia.org/zh-tw/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-tw/面向对象程序设计</a></li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">xxxxtim</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/06/20/designPattern(class)/">http://yoursite.com/2020/06/20/designPattern(class)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JS/">JS</a><a class="post-meta__tags" href="/tags/designPattern/">designPattern</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/07/12/vuex/"><i class="fa fa-chevron-left">  </i><span>Vuex (未完待續)</span></a></div><div class="next-post pull-right"><a href="/2020/06/17/jestInstall/"><span>[測試]Jest install</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By xxxxtim</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
