@@ -20,42 +20,42 @@
 <li>建立一個專案資料夾（jestPractice），並進入到資料夾底下進行初始化。<br>
 初始化的過程中會產生一支package.json檔案</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npm init<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm init<br></code></pre></td></tr></table></figure>
 <ol start="3">
 <li>利用npm 安裝jest。</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// -D:表示的是dependence</span><br><span class="hljs-comment">// 會把jest 的相依套件連結到 package.json</span><br>    npm install jest@<span class="hljs-number">24.8</span><span class="hljs-number">.0</span> -D<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">// -D:表示的是dependence<br>// 會把jest 的相依套件連結到 package.json<br>    npm install jest@24.8.0 -D<br></code></pre></td></tr></table></figure>
 <p>安裝完以後可以看package.json中的 devDependencies使否有增加<br>
 <img src="https://i.imgur.com/IR90yhK.png" alt=""></p>
 <p><code>注意</code></p>
 <p>修改package.json檔案內容中的script</p>
 <p><font color="blue">如果想要用npm跑jest， script要修改</font></p>
 <p>指令：<code>npm test</code> 等同於 <code>npm jest</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">  <span class="hljs-string">"scripts"</span>: &#123;<br>  <span class="hljs-string">"test"</span>: <span class="hljs-string">"jest"</span>,<br>  <span class="hljs-string">"coverage"</span>:<span class="hljs-string">"jest --coverage"</span><br>&#125;,<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">  <span class="hljs-string">"scripts"</span>: &#123;<br>  <span class="hljs-string">"test"</span>: <span class="hljs-string">"jest"</span>,<br>  <span class="hljs-string">"coverage"</span>:<span class="hljs-string">"jest --coverage"</span><br>&#125;,<br></code></pre></td></tr></table></figure>
 <p>如果不想要修改script的話可以在終端機使用<font color="red">npx</font>的方式，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npx jest --coverage<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx jest --coverage<br></code></pre></td></tr></table></figure>
 <ol start="4">
 <li>生成環境建制(產生jest.config)</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npx jest --init<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx jest --init<br></code></pre></td></tr></table></figure>
 <h2 id="jest-常見的指令"><a class="header-anchor" href="#jest-常見的指令"></a>jest 常見的指令</h2>
 <ul>
 <li>幫<font color="red">所有</font>的檔案進行測試</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npx jest<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx jest<br></code></pre></td></tr></table></figure>
 <ul>
 <li>幫<font color="red">想要</font>的檔案進行測試</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npx jest apple.test.js<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx jest apple.test.js<br></code></pre></td></tr></table></figure>
 <ul>
 <li>幫測試檔案生成<font color="red">覆蓋率報表</font></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npx jest --coverage<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx jest --coverage<br></code></pre></td></tr></table></figure>
 <h2 id="jest引入ES6的語法"><a class="header-anchor" href="#jest引入ES6的語法"></a>jest引入ES6的語法</h2>
 <ul>
 <li>安裝babel的相關檔案</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npm install @babel/core@<span class="hljs-number">7.4</span><span class="hljs-number">.5</span> @babel/preset-env@<span class="hljs-number">7.4</span><span class="hljs-number">.5</span> --D<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install @babel/core@7.4.5 @babel/preset-env@7.4.5 --D<br></code></pre></td></tr></table></figure>
 <ul>
 <li>在根目錄下新增一個檔案（.babelrc），並且修改檔案內容</li>
 </ul>
