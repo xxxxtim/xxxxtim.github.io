@@ -86,6 +86,9 @@ const config = {
           },
         ],
       },
+      colorMode: {
+        defaultMode: "dark",
+      },
       footer: {
         style: "dark",
         links: [
@@ -132,9 +135,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
-        // darkTheme: darkCodeTheme,
-        // theme: lightCodeTheme,
-        theme: darkCodeTheme,
+        darkTheme: darkCodeTheme,
+        theme: lightCodeTheme,
       },
     }),
 };
