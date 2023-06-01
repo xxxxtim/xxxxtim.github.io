@@ -34,7 +34,7 @@ sidebar_position: 4
 - Head : 指向第一個節點的 value
 - Length : 表示節點的數量
 
-```js
+```js  showLineNumbers
 class Node {
   constructor(value) {
     this.value = value;
@@ -43,7 +43,7 @@ class Node {
 }
 ```
 
-```js
+```js  showLineNumbers
 
 class Linklist {
   constructor() {
@@ -56,7 +56,7 @@ class Linklist {
 
 ![](https://i.imgur.com/yJNdVmr.png)
 
-```js
+```js  showLineNumbers
 push(value) {
     let newNode = new Node(value);
     // case 1 : 原本沒有任何節點，現在插入一個新節點
@@ -80,7 +80,7 @@ push(value) {
 
 ![](https://i.imgur.com/fEqjx3A.png)
 
-```js
+```js  showLineNumbers
 // pop 掉最後一個節點
   pop() {
     // 沒有任何一個節點
@@ -112,7 +112,7 @@ push(value) {
 
 - 把第一個 element 拿掉
 
-```js
+```js  showLineNumbers
 shift() {
     if (!this.head) {
       return;
@@ -137,7 +137,7 @@ shift() {
 
 - Add Element before first Element
 
-```js
+```js  showLineNumbers
 unshift(value) {
     if (!this.head) {
       this.head = new Node(value);
@@ -155,7 +155,7 @@ unshift(value) {
 
 ![](https://i.imgur.com/YjOc1Tx.png)
 
-```js
+```js  showLineNumbers
 / 於指定index插入指定節點
   insertAt(index, value) {
     // case1 指定的index不存在
@@ -185,7 +185,7 @@ unshift(value) {
 
 ## get( specified Node )
 
-```js
+```js  showLineNumbers
 // 取得指定節點的值
   get(index) {
     if (index >= this.length || index < 0) {
@@ -199,7 +199,7 @@ unshift(value) {
   }
 ```
 
-```js
+```js  showLineNumbers
 let myLinklist = new Linklist();
 myLinklist.push("Tim");
 myLinklist.push("Mike");
@@ -209,7 +209,7 @@ myLinklist.push("Jason");
 console.log(myLinklist.get(3));
 ```
 
-```bash
+```bash  showLineNumbers {3}
 [Running] node "/Users/yenting/Documents/Aglorithm/Linklist.js"
 
 Jason

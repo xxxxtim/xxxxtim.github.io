@@ -6,7 +6,7 @@ sidebar_position: 5
 
 # Hash Table
 
-## Talk about：
+## 何謂ＨashTable：
 
 雜湊表（Hash table，也叫哈希表），是根據**`Key 而直接查詢在記憶體儲存位置的資料結構`**也就是說，它通過計算出一個鍵值的函數，將所需查詢的數據映射到表中一個位置來讓人查詢，這加快了查找速度。<font color="red">**這個映射函數稱做雜湊函數(Ｈash Function)**</font>，存放記錄的數組稱做雜湊表
 
@@ -43,7 +43,7 @@ sidebar_position: 5
 ## 實作如下：
 
 
-```js title="Build hashTable"
+```js title="Build hashTable" showLineNumbers
 
 class Hashtable {
   // m =hashtable size
@@ -85,7 +85,7 @@ class Hashtable {
 
 - 執行
 
-```js
+```js  showLineNumbers
 let myHashTable = new Hashtable(6);
 myHashTable.set(11424, "mike");
 myHashTable.set(14, "tim");
@@ -96,7 +96,7 @@ myHashTable.printAll();
 
 - 結果
 
-```bash title="[Running] node / Users / yenting / Documents / Aglorithm / HashTable.js"
+```bash title="[Running] node / Users / yenting / Documents / Aglorithm / HashTable.js" showLineNumbers
 # [Running] node "/Users/yenting/Documents/Aglorithm/HashTable.js"
 [
   [],
@@ -120,7 +120,7 @@ myHashTable.printAll();
 :::
 <!-- - build parse function -->
 
-```js title="build parse function"
+```js title="build parse function" showLineNumbers
 
 parse(str) {
     let result = 0;
@@ -133,7 +133,7 @@ parse(str) {
 
 <!-- - refactor hash_2 -->
 
-```js title="refactor hash_2"
+```js title="refactor hash_2" showLineNumbers
 // multiplication method
   hash_2(key) {
     let parsedkey = typeof key !== "number" ? this.parse(key) : key;
@@ -144,7 +144,7 @@ parse(str) {
 
 - 執行如下
 
-```js
+```js showLineNumbers
 myHashTable.set("white", "#FFFFFF");
 myHashTable.set("magenta", "#FF00FF");
 myHashTable.set("red", "#FF0000");
@@ -152,7 +152,7 @@ myHashTable.set("red", "#FF0000");
 myHashTable.printAll();
 ```
 
-```bash
+```bash showLineNumbers
 [
   [ { key: 'white', value: '#FFFFFF' } ],
   [],
