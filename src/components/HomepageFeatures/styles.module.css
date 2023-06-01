@@ -8,4 +8,221 @@
 .featureSvg {
   height: 200px;
   width: 200px;
+} 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@keyframes leg {
+  0% {
+    transform: translateX(0);
+  }
+  
+  25% {
+    transform: translateX(10%);
+  }
+  
+  50% {
+    transform: translateX(0%);
+  }
+  
+  75% {
+    transform: translateX(-10%);
+  }
+  
+  100% {
+    transform: translate(0);
+  }
+  
 }
+@keyframes move{
+  0%{
+    transform: translateX(0);
+  }
+  
+  50%{
+    transform: translateX(160px);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes colorChange{
+  50%{
+    background-color: #1F3A93;
+  }
+}
+@keyframes pupil{
+  0%{transform: translateX(0);}
+  25% {transform: translateX(10%);}
+  49% {transform: translateX(10%); opacity: 1;}
+  50% {transform: translateX(10%); opacity: 0;}
+  100% {opacity: 0; }
+}
+@keyframes bottomChomp{
+  0% {
+    transform: rotate(30deg);
+  }
+  
+  50%{
+    transform: rotate(-45deg);
+  }
+  
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes topChomp{
+  0% {
+    transform: rotate(-30deg);
+  }
+  
+  50%{
+    transform: rotate(30deg);
+  }
+  
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  50% {
+    transform: rotate(-180deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* // body{
+//   background-color: #13181d;
+// } */
+.loader_container {
+  margin: 10% auto;
+  /* // margin-left: -160px; */
+  text-align: center;
+  font-size: 45px;
+  font-family: fantasy,monospace;
+}
+/* // .animation_container {
+//   // margin-left: -160px;
+// } */
+.ghost_container {
+  height: 29px;
+  width:29px;
+  display: inline-block;
+  animation: move 5s linear 2s infinite;
+}
+.pac_man_move_container {
+  margin-left: 30px;
+  display: inline-block;
+  animation: move 5s linear 2s infinite;
+}
+
+.pac_man_container {
+  height :30px;
+  width :30px;
+  display: inline-block;
+  animation: spin 5s cubic-bezier(1, 0.05, 1,-0.32) 2s infinite;
+}
+
+.pac_man_top, .pac_man_bottom {
+  border: 14px solid rgb(255, 196, 0);
+  border-radius: 50%;
+  border-right-color: transparent;
+}
+
+
+.pac_man_top {
+  border-bottom-color: transparent;
+  animation: topChomp 0.3s linear 2s infinite;
+}
+
+.pac_man_bottom {
+  margin-top: -94%;
+  /* // border-top-color: transparent; */
+  animation: bottomChomp 0.3s linear 2s infinite;
+}
+
+
+
+
+.red .ghost_body, .red .ghost_leg {
+  background-color: #E74C3C;
+}
+
+
+.blue .ghost_body, .blue .ghost_leg {
+  background-color: #5C97BF;
+}
+
+.pink .ghost_body, .pink .ghost_leg {
+  background-color: #D2527F;
+}
+
+.orange .ghost_body, .orange .ghost_leg{
+  background-color: #EB974E;
+}
+
+.ghost_body{
+  height: 70%;
+  border-radius: 100% 100% 0 0;
+  animation: colorChange 5s cubic-bezier(1, 0.05, 1,-0.32) 2s infinite;
+}
+
+.ghost_legs_container{
+  position: relative;
+  height: 30%;
+  overflow: hidden;
+}
+
+.ghost_leg {
+  width: 33.333%;
+  height: 100%;
+  float: left;
+  /* // display: inline-block; */
+  border-radius: 0 0 50% 50%;
+  animation: leg 0.8s linear 2s infinite, colorChange 5s cubic-bezier(1, 0.05, 1,-0.32) 2s infinite;
+}
+
+
+
+.eyes_container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
+  top: 30%;
+  margin: 0 10%;
+}
+
+.eye {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  background-color: #fff;
+  height: 100%;
+  width: 40%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.eye > .pupil {
+  position: relative;
+  background-color: #000;
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+  animation: pupil 5s linear 2s infinite;
+}
+
+
+
+
+
+

@@ -1,11 +1,11 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Easy to Use",
+    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -14,8 +14,8 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Focus on What Matters",
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
@@ -24,8 +24,8 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Powered by React",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -35,9 +35,9 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -51,12 +51,93 @@ function Feature({Svg, title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    // <section className={styles.features}>
+    //   <div className="container">
+    //     <div className="row">
+    //       {FeatureList.map((props, idx) => (
+    //         <Feature key={idx} {...props} />
+    //       ))}
+    //     </div>
+    //   </div>
+    // </section>
+
+    <section className={styles.loader_container}>
+      <p>Hello, I'm Xtim</p>
+      <p>Wellcome to my Site ٩(◦`꒳´◦)۶</p>
+      <div>
+        <div className={`${styles.ghost_container} ${styles.red}`}>
+          <div className={styles.ghost_body}>
+            <div className={styles.eyes_container}>
+              <div className={styles.eye}>
+                <div className={styles.pupil}></div>
+              </div>
+              <div className={styles.eye}>
+                <div className={styles.pupil}></div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.ghost_legs_container}>
+            <div className={`${styles.ghost_leg} ${styles.leg_1}`}></div>
+            <div className={`${styles.ghost_leg} ${styles.leg_2}`}></div>
+            <div className={`${styles.ghost_leg} ${styles.leg_3}`}></div>
+          </div>
+        </div>
+        <div className={`${styles.ghost_container} ${styles.pink}`}>
+          <div className={styles.ghost_body}>
+            <div className={styles.eyes_container}>
+              <div className={styles.eye}>
+                <div className={styles.pupil}></div>
+              </div>
+              <div className={styles.eye}>
+                <div className={styles.pupil}></div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.ghost_legs_container}>
+            <div className={`${styles.ghost_leg} ${styles.leg_1}`}></div>
+            <div className={`${styles.ghost_leg} ${styles.leg_2}`}></div>
+            <div className={`${styles.ghost_leg} ${styles.leg_3}`}></div>
+          </div>
+        </div>
+        <div className={`${styles.ghost_container} ${styles.blue}`}>
+          <div className={styles.ghost_body}>
+            <div className={styles.eyes_container}>
+              <div className={styles.eye}>
+                <div className={styles.pupil}></div>
+              </div>
+              <div className={styles.eye}>
+                <div className={styles.pupil}></div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.ghost_legs_container}>
+            <div className={`${styles.ghost_leg} ${styles.leg_1}`}></div>
+            <div className={`${styles.ghost_leg} ${styles.leg_2}`}></div>
+            <div className={`${styles.ghost_leg} ${styles.leg_3}`}></div>
+          </div>
+        </div>
+        <div className={`${styles.ghost_container} ${styles.orange}`}>
+          <div className={styles.ghost_body}>
+            <div className={styles.eyes_container}>
+              <div className={styles.eye}>
+                <div className={styles.pupil}></div>
+              </div>
+              <div className={styles.eye}>
+                <div className={styles.pupil}></div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.ghost_legs_container}>
+            <div className={`${styles.ghost_leg} ${styles.leg_1}`}></div>
+            <div className={`${styles.ghost_leg} ${styles.leg_2}`}></div>
+            <div className={`${styles.ghost_leg} ${styles.leg_3}`}></div>
+          </div>
+        </div>
+        <div className={styles.pac_man_move_container}>
+          <div className={styles.pac_man_container}>
+            <div className={styles.pac_man_top}></div>
+            <div className={styles.pac_man_bottom}></div>
+          </div>
         </div>
       </div>
     </section>

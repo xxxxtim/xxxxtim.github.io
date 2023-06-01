@@ -65,19 +65,20 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "Xtim's Site",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          //src: "img/logo.svg", //nav 頭貼
+          src: "img/ghost.png",
         },
         items: [
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "Blog",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "Notes", position: "left" },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
