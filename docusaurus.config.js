@@ -1,14 +1,12 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-// @ts-ignore
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-// @ts-ignore
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+// const lightCodeTheme = require("prism-react-renderer").themes.github;
+// const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: "Xtim's Blog",
   tagline: "Dinosaurs are cool",
   favicon: "img/ghost.png",
 
@@ -129,8 +127,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
-        darkTheme: darkCodeTheme,
-        theme: lightCodeTheme,
+        // darkTheme: darkCodeTheme,
+        // theme: lightCodeTheme,
       },
     }),
 };
