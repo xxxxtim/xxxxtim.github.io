@@ -1,12 +1,12 @@
 ---
-tags: [alogrithm,hashTable]
+tags: [algorithm,hashTable]
 sidebar_position: 5
 ---
 
 
 # Hash Table
 
-## 何謂ＨashTable：
+## 何謂HashTable：
 
 雜湊表（Hash table，也叫哈希表），是根據**`Key 而直接查詢在記憶體儲存位置的資料結構`**也就是說，它通過計算出一個鍵值的函數，將所需查詢的數據映射到表中一個位置來讓人查詢，這加快了查找速度。<font color="red">**這個映射函數稱做雜湊函數(Ｈash Function)**</font>，存放記錄的數組稱做雜湊表
 
@@ -96,8 +96,8 @@ myHashTable.printAll();
 
 - 結果
 
-```bash title="[Running] node / Users / yenting / Documents / Aglorithm / HashTable.js" showLineNumbers
-# [Running] node "/Users/yenting/Documents/Aglorithm/HashTable.js"
+```bash title="[Running] node / Users / yenting / Documents / Algorithm / HashTable.js" showLineNumbers
+# [Running] node "/Users/yenting/Documents/Algorithm/HashTable.js"
 [
   [],
   [],
@@ -111,7 +111,7 @@ myHashTable.printAll();
 [Done] exited with code=0 in 0.043 seconds
 ```
 
-## Hash keys are not nunber
+## Hash keys are not number
 :::info
 接下來我們試著思考一個問題，<font color="red">**如果HashTable的key不是數字我們該如何去處裡？**</font>
 
