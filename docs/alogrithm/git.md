@@ -39,7 +39,7 @@ $ git log --oneline --graph --decorate
 ```
 觀察 HEAD 指向的地方，在原本 master 的位置分岔出一條未定義的分支。
 
-要讓這條分支能落在 master 上，首先，給不小心岔出來的路徑配上一個正式分支，我暫且把它命名為 oops，並且切換到 oops 分支上。
+要讓這條分支能落在 main 上，首先，給不小心岔出來的路徑配上一個正式分支，我暫且把它命名為 oops，並且切換到 oops 分支上。
 ```bash title="[Terminal]" showLineNumbers
 $ git branch oops d239enc
 $ git checkout oops
@@ -48,7 +48,7 @@ $ git checkout oops
 ```bash title="[Terminal]" showLineNumbers
 $ git checkout -b oops
 ```
-接著執行 rebase 指令 $\rightarrow$ 把 oops 接到 main 之後，可以清楚地看到 HEAD 轉移到 commit B 上
+接著執行 rebase 指令，把 oops 接到 main 之後，可以清楚地看到 HEAD 轉移到 commit B 上
 
 ```bash title="[Terminal]" showLineNumbers
 $ git log --oneline --graph --decorate
