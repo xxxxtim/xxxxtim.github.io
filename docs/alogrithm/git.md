@@ -26,7 +26,7 @@ git push origin HEAD:<name-of-remote-branch>
 
 主要是HEAD 回到先前狀態時，git 會預設 user 打算離開目前分支，並開一條新的分支從舊的 commit 點分岔出來繼續開發。
 
-但是偏偏 git 並不會自己定義新的分支，導致 HEAD 沒有指向任何分支的窘境。這就叫 <font color="#00FFFF">detached HEAD</font>，就算重新 checkout 回 commit A ，狀況還是存在。
+但是偏偏 git 並不會自己定義新的分支，導致 HEAD 沒有指向任何分支的窘境。這就叫 <font color="#EE7700">detached HEAD</font>，就算重新 checkout 回 commit A ，狀況還是存在。
 
 **解決方法如下**
 ```bash title="[Terminal]" showLineNumbers
@@ -73,11 +73,14 @@ $ git log --oneline --graph --decorate
 * 0ac097d change the site name
 ```
 最後砍掉剛剛開的新分支並且 push 到遠端
+
 ```bash title="[Terminal]" showLineNumbers
 $ git branch -d oops
 $ git push
 ```
+
 結果如下：
+
 ```bash title="[Terminal]" showLineNumbers
 $ git log --oneline --graph --decorate
 
@@ -89,6 +92,7 @@ $ git log --oneline --graph --decorate
 
 參考資料如下 ：
 
+https://git-scm.com/book/zh-tw/v2/%E4%BD%BF%E7%94%A8-Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E5%92%8C%E5%90%88%E4%BD%B5%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95
 
 
 
