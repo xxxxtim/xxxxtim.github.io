@@ -2,8 +2,8 @@
 tags: [Vim筆記]
 sidebar_position: 7
 ---
-# Vim筆記 
-![](./img/vim.png)
+# Vim 快捷鍵 
+![](vim.png)
 ## 基礎設定
 * Vim中默認是 <font color="red">Normal </font>模式，需要輸入<font color="red"> i </font> 才能進入insert 模式
 * insert 模式下，退出鍵 <font color="red">Escape </font>回到 normal 模式
