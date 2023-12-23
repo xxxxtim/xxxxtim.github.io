@@ -62,6 +62,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // declare meta tag and add google console search
+      metadata: [
+        {
+          name: "google-site-verification",
+          content: "w5D743PiP-nV9ZnG0E5Toy5BvqICaFPVfmEpVf3gRDU",
+        },
+      ],
       // algolia
       algolia: {
         apiKey: "b5a8d0af96a1b33bb26fad462ef718c5",
