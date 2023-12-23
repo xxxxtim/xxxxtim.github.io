@@ -1,8 +1,7 @@
 ---
 tags: [Git]
 ---
-# Git 筆記
-## 開發過程中 HEAD跑掉怎麼辦 detached HEAD？
+# 開發過程中 HEAD跑掉怎麼辦 detached HEAD？
 **前情提要 :**
 
 在開方過程中，原本在 main 分支上的有三個 commit，由新到舊分別為Ａ,B,C (目前主要開發在Ａ)，可是某一天我想回到commit B的時間點去拿一些資料進行開發，因此我執行了
