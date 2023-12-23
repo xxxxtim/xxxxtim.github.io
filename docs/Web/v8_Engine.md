@@ -1,6 +1,6 @@
 ---
 tags: [alogrihm,V8_Engine]
-sidebar_position: 6
+sidebar_position: 1
 ---
 # 瀏覽器的翻譯官 Engine
 ## Who is Engine?
@@ -12,11 +12,11 @@ sidebar_position: 6
 
 就像我去日本，我需要專門的日文翻譯，所以不同的瀏覽器也會有不同的翻譯官負責，每一位翻譯官的能力與優缺點也完全不同。
 ## 翻譯官的工作內容有哪些？
-![](./img/V8%20Engine.png)
+![](V8%20Engine.png)
 首先JS文檔會先經過Parser(語意分析器)進行語法分析，，並且建立由文檔組成的資料結構(語意分析樹，也叫AST)，接著把剛剛建立的資料結構(AST)經由<font color="red">**直譯器(Interpreter)**</font>翻譯成ByteCode或是經由Profiler進行程式碼的監控與效能優化再經過<font color="red">**編譯器(Compiler)**</font>翻譯成電腦看得懂的語言。
 ## 直譯器(Interpreter)與編譯器(Compiler)的差別
 在電腦世界裡，主要都是透過0101來溝通的，這邊稱為電腦語言;而我們常常寫的程式碼主要叫做程式語言，主要是方便人類看的，至於要將程式語言轉換成電腦語言就需要經過直譯器或是編譯器的轉換。
-![](./img/machineCode.png)
+![](machineCode.png)
 如程式碼所示：
 直譯器在翻譯過程中會逐行去翻譯你所寫的程式碼，並且逐行去執行，所以直譯器會先執行宣告returnAdd，接著再執行for迴圈，每執行一次迴圈就會在宣告一次returnAdd並且執行。
 

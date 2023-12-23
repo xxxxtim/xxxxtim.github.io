@@ -30,7 +30,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "jp"],
   },
 
   presets: [
@@ -78,7 +78,7 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "Xtim's Site",
+        title: "Yenting Wang",
         logo: {
           alt: "My Site Logo",
           //src: "img/logo.svg", //nav 頭貼
@@ -91,52 +91,57 @@ const config = {
             position: "left",
             label: "Blog",
           },
+          {
+            type: "localeDropdown",
+            position: "right",
+          },
+
           { to: "/blog", label: "Tourism", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/xxxxtim",
             label: "GitHub",
             position: "right",
           },
         ],
       },
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: "light",
       },
       footer: {
         style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Tourism",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/xxxxtim",
-              },
-            ],
-          },
-        ],
+        // links: [
+        //   {
+        //     title: "Docs",
+        //     items: [
+        //       {
+        //         label: "Tutorial",
+        //         to: "/docs/intro",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "Community",
+        //     items: [
+        //       {
+        //         label: "Discord",
+        //         href: "https://discordapp.com/invite/docusaurus",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "More",
+        //     items: [
+        //       {
+        //         label: "Tourism",
+        //         to: "/blog",
+        //       },
+        //       {
+        //         label: "GitHub",
+        //         href: "https://github.com/xxxxtim",
+        //       },
+        //     ],
+        //   },
+        // ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
