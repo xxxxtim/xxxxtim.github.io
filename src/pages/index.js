@@ -7,11 +7,9 @@ import styles from "./index.module.css";
 export default function Home() {
   return (
     <Layout>
-      <div>
-        <main>
-          <HomepageFeatures />
-        </main>
-      </div>
+      <main>
+        <HomepageFeatures />
+      </main>
     </Layout>
   );
 }
