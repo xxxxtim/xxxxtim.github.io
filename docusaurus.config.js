@@ -105,10 +105,10 @@ const config = {
         ],
       },
       colorMode: {
-        defaultMode: "light",
+        defaultMode: "dark",
       },
       footer: {
-        style: "dark",
+        // style: "dark",
         // links: [
         //   {
         //     title: "Docs",
