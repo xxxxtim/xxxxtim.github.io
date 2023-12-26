@@ -36,7 +36,7 @@ $ git log --oneline --graph --decorate
 * 8d384ae change the favicon // commit C 
 * 0ac097d change the site name
 ```
-觀察 HEAD 指向的地方，在原本 master 的位置分岔出一條未定義的分支。
+觀察 HEAD 指向的地方，在原本 main 的位置分岔出一條未定義的分支。
 
 要讓這條分支能落在 main 上，首先，給不小心岔出來的路徑配上一個正式分支，我暫且把它命名為 oops，並且切換到 oops 分支上。
 ```bash title="[Terminal]" showLineNumbers
@@ -50,6 +50,9 @@ $ git checkout -b oops
 接著執行 rebase 指令，把 oops 接到 main 之後，可以清楚地看到 HEAD 轉移到 commit B 上
 
 ```bash title="[Terminal]" showLineNumbers
+$ git rebase main
+```
+```bash title="[Terminal]" showLineNumbers
 $ git log --oneline --graph --decorate
 
 * d239enc (HEAD -> oops) change the node version // commit B
@@ -60,7 +63,7 @@ $ git log --oneline --graph --decorate
 接著切回 main 並且執行 merge ，merge 指令能讓 main 走到跟新分支一樣的位置
 
 ```bash title="[Terminal]" showLineNumbers
-$ git checkout master
+$ git checkout main
 $ git merge oops
 ```
 ```bash title="[Terminal]" showLineNumbers
@@ -92,6 +95,8 @@ $ git log --oneline --graph --decorate
 參考資料如下 ：
 
 https://git-scm.com/book/zh-tw/v2/%E4%BD%BF%E7%94%A8-Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E5%92%8C%E5%90%88%E4%BD%B5%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95
+
+https://wyatthoho.medium.com/git%E6%96%B7%E9%A0%AD%E4%BA%86-%E6%80%8E%E9%BA%BC%E8%BE%A6-d32b53e32ff
 
 
 
