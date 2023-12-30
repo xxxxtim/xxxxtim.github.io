@@ -86,17 +86,28 @@ const config = {
         },
         items: [
           {
+            to: "/profile",
+            label: " 👤 Profile",
+            position: "left",
+          },
+          {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Blog",
+            label: "</>Blog",
           },
+
+          {
+            to: "/blog",
+            label: "開箱",
+            position: "left",
+          },
+
           {
             type: "localeDropdown",
             position: "right",
           },
 
-          { to: "/blog", label: "Tourism", position: "left" },
           {
             href: "https://github.com/xxxxtim",
             label: "GitHub",
