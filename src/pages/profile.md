@@ -1,21 +1,38 @@
-# About / 認識 Xtim
+# About Me /
 
-你好，我是彥珽 Xtim ，
+你好，我是 王彥珽 Xtim ，目前任職於中華電信，負責訊號與品質改善，熟悉影像演算法與前端開發。
 
-目前任職於中華電信，負責訊號與品質改善，熟悉影像演算法與前端開發。
+喜歡分享新技術，目前努力往雲端與後端前進，有在做網站架設諮詢與一些個人的 sideProject ，歡迎揪團與開讀書會。
 
-工作上認真負責，喜歡分享新技術，目前有在做網站架設諮詢與一些個人的sideProject，歡迎揪團與開讀書會
+---
 
-# Information / 個人資訊
+# Skill /
 
-* 姓名：王彥珽 / Yenting Wang
+* Frontend / React.js / Git / Vue.js / Node.js / 
 
-* 生日：1982.02.01
+* Image Recognition for vehicle / C / system Verilog
 
-* 學歷：國立中興大學 系統晶片組 碩士 / National Chung Hsing University
+* Microsoft Azure  900 Fundamental 
 
-* 地點：台南 / Tainan, Taiwan
+* JLPT N2 
+---
 
-* 郵件：xxxxtim666@gmail.com
+# Experience /
 
-* 職稱：工程師 / Engineer
+* 國立中興大學 系統晶片組 碩士 / National Chung Hsing University 
+
+* 2017 AP 聯盟-第二屆交大系統黑克松季軍
+
+* 2017 Synopsys ARC 盃海峽兩岸電子設計大賽
+
+* 2016 智慧電子應用設計競賽銀獎
+
+* 國科會計畫-用於智慧型穿戴式裝置之目標導向
+
+* 國科會計畫-可程式化障礙物偵測與識別整合與展示
+
+
+---
+# Contact /
+
+* Email : xxxxtim666@gmailc.om
