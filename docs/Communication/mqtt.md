@@ -29,7 +29,7 @@ MQTT 協定定義了兩種網路實體：<font color="yellow">訊息代理（mes
 * QoS 0 為最多傳輸一次，且不保證訊息能夠成功傳出；
 * QoS 1 為至少傳輸一次( 握手2次 )，可以確保消息能夠到達接收端，但可能會重複傳輸；
 * QoS 2 為確實傳輸一次( 握手4次 )，傳送訊息時會分成兩段式，並保證消息能夠到達接收端，但也可能導致較高的延遲。
-## MQTT vs HTTP
+## MQTT vs HTTP 差異
 
 MQTT was designed for the Internet of Things (although it wasn’t called that at the time) whereas HTTP was created to make documents available across the internet.
 
@@ -38,6 +38,15 @@ MQTT was designed for the Internet of Things (although it wasn’t called that a
 <font color="#33FF33">MQTT 與 HTTP 都是利用 TCP / IP 協定來傳遞資料，只是 MQTT 是雙向溝通，而 HTTP 則是單向回應 Responses </font>( Once an MQTT connection is established, any number of messages can be sent through it in both directions, data from sensor to back-end, and commands the other way )
 
 HTTP deals with requests one at a time, with overhead such as authentication being carried out each time. HTTP does have some ability to pool TCP connections, but the overhead for each message remains. MQTT message payloads are binary, whereas HTTP are textual so that binary data needs to be base64 encoded.
+
+## MQTT 和 HTTP 的通信模式對於數據隱私和安全有何不同影響？
+
+首先，MQTT 通常使用 TLS（ Transport Layer Security ）或其前身 SSL（ Secure Sockets Layer ）來加密通信，這有助於確保數據的機密性和完整性。通過加密，MQTT可以防止未經授權的截取和竊聽，從而保護敏感的IoT信息。此外，MQTT還支持基於X.509證書的身份驗證，這進一步增強了通信的安全性。
+
+相比之下，HTTP的通信模式在安全性方面較為薄弱。雖然HTTP也可以使用 TLS / SSL 來加密通信，但它的請求-響應模式和文本型消息傳輸使得數據的安全性相對較低。特別是在物聯網環境中，HTTP的請求-響應模式可能會導致數據的安全性和隱私性受到威脅，因為每次請求都需要進行身份驗證，這可能會增加風險。
+
+總的來說，MQTT的通信模式對於數據的隱私和安全性有著更好的保護，特別是在IoT環境中。它的加密和身份驗證功能使得數據在傳輸過程中更難受到未經授權的訪問和竊取。
+因此，在考慮數據隱私和安全性時，選擇通信協議時應該考慮到這些因素。
 
 ## 後記
 
