@@ -1,4 +1,8 @@
+---
+tags: [react,web]
+---
 # [ react ]  Context API 的使用 
+
 ##   Context api 的使用情境
 一般來說，如果想要在 react 中使用<font color="#FFBB00"> 全域變數</font>，並且希望每個 Component 都可以使用到，而且不想用到 Props 的話，就可以使用此種方法。
 ( Context is primarily used when some data needs to be accessible by many components at different nesting levels. Apply it sparingly because it makes component reuse more difficult.)
