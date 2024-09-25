@@ -18,6 +18,7 @@
     "@docusaurus/core": "2.4.1",
     "@docusaurus/preset-classic": "2.4.1",
     "@mdx-js/react": "^1.6.22",
+    "algoliasearch": "^4.24.0",
     "browserslist": "^4.22.2",
     "caniuse-lite": "^1.0.30001651",
     "clsx": "^1.2.1",
