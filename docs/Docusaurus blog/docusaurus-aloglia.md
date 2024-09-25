@@ -116,6 +116,7 @@ $ brew install jq
 
 <font color="gree">PS : 由於我的電腦為 Mac Arm64 的規格，所以指令需要指定平台為 linux / amd64 才能執行 
 </font>
+
 ```bash title="[Terminal]" showLineNumbers
 docker run -it --platform linux/amd64 --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
 
