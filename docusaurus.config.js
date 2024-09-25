@@ -71,9 +71,9 @@ const config = {
       ],
       // algolia
       algolia: {
-        apiKey: "b5a8d0af96a1b33bb26fad462ef718c5",
+        apiKey: "6b0350e5ee04f55607d446e9e24d3264",
         indexName: "Docusaurus-Algolia",
-        appId: "4J95IF7TX1",
+        appId: "ZQMOYX9HDW",
       },
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
