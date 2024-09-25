@@ -28,19 +28,29 @@ npm install @docsearch/react
 * indexName : Algolia 的 index 名稱。
 * appId : Algolia 的 Application ID。
 
-![docusaurus.config.js](image-2.png)
+<!-- ![docusaurus.config.js](image-2.png) -->
 ## 環境變數與 Docker 設定爬蟲
 ### .env file setting 
 先到  [DOCSEARCH 官網](https://docsearch.algolia.com/docs/legacy/run-your-own) 看要如何新增設定 <font color="#EE7700">.env 檔案 </font> ，並且設定你的 Application ID 和 API key 。
 
+<font color="gree">必須注意的是 .env file 中的 API key 為你的 Admin API key </font>
+
 ![Alt text](image-4.png)
 
-![application key and api id ](image-3.png)
+
 
 ```bash title="[.env]" showLineNumbers
-APPLICATION_ID=4J95IF7TX1
-API_KEY=b5a8d0af96a1b33bb26fad462ef718c5
+APPLICATION_ID= input your APP ID
+API_KEY= input your Admin API Key
 ```
+###  algoliasearch.exceptions.RequestException: Method not allowed with this API key 的解決方法
+
+當遇到'algoliasearch.exceptions.RequestException: Method not allowed with this API key'的問題時，錯誤並非由Python版本引起。
+
+問題根源在於.env文件中配置的API_KEY不正確，應使用Admin API Key而非Search Only Key。
+
+修正.env文件並使用正確的Admin API Key後，通過Docker鏡像上傳數據即可成功。
+
 ### config.json file setting 
 
 之後在根目錄再新增一個 json 檔案，名為 config.json，設定如下。
@@ -104,8 +114,11 @@ $ brew install jq
 ### 爬取資料並新增至 Algolia
 輸入以下指令並且進行資料爬取。
 
+<font color="gree">PS : 由於我的電腦為 Mac Arm64 的規格，所以指令需要指定平台為 linux / amd64 才能執行 
+</font>
 ```bash title="[Terminal]" showLineNumbers
-docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
+docker run -it --platform linux/amd64 --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
+
 ```
 執行成功的話，會看到 docsearch-scraper 正在爬取我們的網站內容，並將資料新增至 Algolia。
 
