@@ -81,7 +81,7 @@ $ git branch -d oops
 $ git push
 ```
 
-結果如下：
+顯示結果如下：
 
 ```bash title="[Terminal]" showLineNumbers
 $ git log --oneline --graph --decorate
