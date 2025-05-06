@@ -26,7 +26,7 @@ Unversioned and major-versioned symlinks `python`, `python3`, `python-config`, `
 where python3
 where python
 ```
-- 如果路徑不一致，則進行`./zshre`修改
+- 如果路徑不一致，則進行`./zshrc`修改
 `./zshrc`檔案主要在電腦user底下，可以利用`ll -al`進行查詢
 ![alt text](image.png)
 - 利用`vi`開啟 `./zshrc`並進行修正
