@@ -1,0 +1,13 @@
+{
+    "label": "CommonPackage",
+    "position":3, 
+    "link": {
+      "type": "generated-index",
+      "description": "Common Package",
+      "slug": "CommonPackage",
+      "keywords": ["CommonPackage", "common", "package"],
+      "title": "Common Package",
+      "sidebar_label": "Common Package",
+      "className": "common-package"
+    }
+  }
