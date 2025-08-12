@@ -15,7 +15,7 @@ AceJump 是一個 Vim 的插件，旨在提高光標移動的效率。
    ```
 ## 使用 AceJump
 使用 AceJump 非常簡單。以下是一些基本的使用方法：
-1. 在 Vim 中按下 <font color="yellow">Ctrl + f </font>或是 <font color="yellow">Ctrl+;</font> 進入 AceJump 模式。
+1. 在 Vim 中按下 <font color="yellow">Ctrl + f </font>或是 <font color="yellow"> Ctrl+; </font> 進入 AceJump 模式。
 2. 輸入要跳轉到的字符或單詞的首字母。
 3. AceJump 會顯示所有匹配的字符或單詞，並為每個匹配項分配一個唯一的標識符。
 4. 按下對應的標識符鍵，光標將跳轉到該位置。
