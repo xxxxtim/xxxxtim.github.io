@@ -15,3 +15,15 @@ git reset --hard "commit ID"
 ```bash title="[Terminal]" showLineNumbers
 git push -f
 ```
+## git 回復被改壞的文件
+有時候我們可能會不小心把文件改壞了，想要回復到之前的版本。這時候可以使用 git checkout 指令來回復文件。
+恢復到最後一次提交的改動：
+
+1.需要注意的是，如果該文件已經 add 到暫存區，下面的指令就不適用了
+```bash title="[Terminal]" showLineNumbers
+git reset HEAD -- + 需要取消暂存的文件名
+```
+2.使用 checkout 指令回復文件
+```bash title="[Terminal]" showLineNumbers
+git checkout -- + 需要恢復的文件名
+```
